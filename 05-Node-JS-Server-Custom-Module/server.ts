@@ -1,4 +1,5 @@
 import http, { Server, IncomingMessage, ServerResponse } from "http"; // 내부로 설치된 모듈이다. core module
+import { MathUtil } from "./util/MathUtil";
 import { StringUtil } from "./util/StringUtil";
 
 const hostname: string = "127.0.0.1";
@@ -15,6 +16,10 @@ const server: Server = http.createServer(
 
     let channelName: string = "Uribrains Technologies";
     let result: string = StringUtil.printTriangle(channelName);
+
+    // Math Util
+    let tempNumber: number = 5;
+    result = MathUtil.printMathTable(tempNumber);
 
     console.log("length", length);
     console.log(result);
